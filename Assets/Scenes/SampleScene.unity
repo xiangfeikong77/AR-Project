@@ -1483,13 +1483,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 10
+  mTrackableName: 8
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/FinalProject.xml
-  mAspectRatio: 1.3333327
+  mAspectRatio: 1.3333273
   mImageTargetType: 0
-  mWidth: 0.55
-  mHeight: 0.733333
+  mWidth: 0.055
+  mHeight: 0.073333
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -1525,7 +1525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1409602828}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 10
+  mTargetName: 8
   mDatasetName: Vuforia/FinalProject.xml
   mCastedBehaviour: {fileID: 1409602828}
   mMeshFilter: {fileID: 0}
