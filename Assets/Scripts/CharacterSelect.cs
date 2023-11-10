@@ -12,6 +12,7 @@ public class CharacterSelect : MonoBehaviour
     {
         selectedCharacterPosition = 0;
         selectedCharacter = availableCharacterArray[selectedCharacterPosition];
+        selectedCharacter.SetActive(true);
     }
 
     // Update is called once per frame
@@ -20,19 +21,20 @@ public class CharacterSelect : MonoBehaviour
         if (selectedCharacter != null) { }
     }
 
-    void onButtonPressed()
+    public void onButtonPressed()
     {
+        selectedCharacter.SetActive(false);
+
         int numberOfAvailableCharacters = availableCharacterArray.Length;
 
-        if (selectedCharacterPosition < numberOfAvailableCharacters)
-        {
-            selectedCharacterPosition++;
-        } 
-        else if (selectedCharacterPosition >= numberOfAvailableCharacters)
+        selectedCharacterPosition++;
+
+        if (selectedCharacterPosition >= numberOfAvailableCharacters)
         {
             selectedCharacterPosition = 0;
         }
 
         selectedCharacter = availableCharacterArray[selectedCharacterPosition];
+        selectedCharacter.SetActive(true);
     }
 }
