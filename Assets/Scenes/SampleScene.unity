@@ -135,25 +135,37 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009870088834314181, guid: e8ddd97a1f25411488b4818d842aebd2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009870088834314181, guid: e8ddd97a1f25411488b4818d842aebd2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009870088834314181, guid: e8ddd97a1f25411488b4818d842aebd2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3282565112712815564, guid: e8ddd97a1f25411488b4818d842aebd2, type: 3}
       propertyPath: m_Name
       value: CrawlingRobot
       objectReference: {fileID: 0}
     - target: {fileID: 4775622824234394273, guid: e8ddd97a1f25411488b4818d842aebd2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 4775622824234394273, guid: e8ddd97a1f25411488b4818d842aebd2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 4775622824234394273, guid: e8ddd97a1f25411488b4818d842aebd2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 4775622824234394273, guid: e8ddd97a1f25411488b4818d842aebd2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.961
+      value: -0.2309
       objectReference: {fileID: 0}
     - target: {fileID: 4775622824234394273, guid: e8ddd97a1f25411488b4818d842aebd2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -161,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4775622824234394273, guid: e8ddd97a1f25411488b4818d842aebd2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.192
+      value: 0.0473
       objectReference: {fileID: 0}
     - target: {fileID: 4775622824234394273, guid: e8ddd97a1f25411488b4818d842aebd2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -646,13 +658,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 4
+  mTrackableName: Meteoroid
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/FinalProject.xml
-  mAspectRatio: 0.75
+  mAspectRatio: 0.6384702
   mImageTargetType: 0
-  mWidth: 0.085
-  mHeight: 0.06375
+  mWidth: 0.0889
+  mHeight: 0.05676
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -689,7 +701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 196623231}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 4
+  mTargetName: Meteoroid
   mDatasetName: Vuforia/FinalProject.xml
   mCastedBehaviour: {fileID: 196623231}
   mMeshFilter: {fileID: 0}
@@ -1105,7 +1117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &686792625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1165,13 +1177,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 3
+  mTrackableName: Wormhole
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/FinalProject.xml
-  mAspectRatio: 0.75
+  mAspectRatio: 0.6347919
   mImageTargetType: 0
-  mWidth: 0.085
-  mHeight: 0.06375
+  mWidth: 0.0889
+  mHeight: 0.056433
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -1207,7 +1219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 686792626}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 3
+  mTargetName: Wormhole
   mDatasetName: Vuforia/FinalProject.xml
   mCastedBehaviour: {fileID: 686792626}
   mMeshFilter: {fileID: 0}
@@ -1324,7 +1336,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &724025592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1384,13 +1396,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 2
+  mTrackableName: Junk
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/FinalProject.xml
-  mAspectRatio: 0.75
+  mAspectRatio: 0.63598424
   mImageTargetType: 0
-  mWidth: 0.085
-  mHeight: 0.06375
+  mWidth: 0.0889
+  mHeight: 0.056539
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -1426,7 +1438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 724025593}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 2
+  mTargetName: Junk
   mDatasetName: Vuforia/FinalProject.xml
   mCastedBehaviour: {fileID: 724025593}
   mMeshFilter: {fileID: 0}
@@ -1730,15 +1742,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5207765807313590347, guid: e4d49a382ff46eb42b97581fd004e9f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.0002
+      value: 0.00035
       objectReference: {fileID: 0}
     - target: {fileID: 5207765807313590347, guid: e4d49a382ff46eb42b97581fd004e9f6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0002
+      value: 0.00035
       objectReference: {fileID: 0}
     - target: {fileID: 5207765807313590347, guid: e4d49a382ff46eb42b97581fd004e9f6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.0002
+      value: 0.00035
       objectReference: {fileID: 0}
     - target: {fileID: 5207765807313590347, guid: e4d49a382ff46eb42b97581fd004e9f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2556,15 +2568,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4765403230066083608, guid: e39cd09699aacb9439fa4ba911de0756, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.03
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 4765403230066083608, guid: e39cd09699aacb9439fa4ba911de0756, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.03
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 4765403230066083608, guid: e39cd09699aacb9439fa4ba911de0756, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.03
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 4765403230066083608, guid: e39cd09699aacb9439fa4ba911de0756, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2626,15 +2638,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6022033318603830753, guid: 10f4b5ef48f103c4e93840bae4c0c1fd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.02
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6022033318603830753, guid: 10f4b5ef48f103c4e93840bae4c0c1fd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.02
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6022033318603830753, guid: 10f4b5ef48f103c4e93840bae4c0c1fd, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.02
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6022033318603830753, guid: 10f4b5ef48f103c4e93840bae4c0c1fd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2642,7 +2654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6022033318603830753, guid: 10f4b5ef48f103c4e93840bae4c0c1fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.02
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6022033318603830753, guid: 10f4b5ef48f103c4e93840bae4c0c1fd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2679,6 +2691,10 @@ PrefabInstance:
     - target: {fileID: 8285591954927328280, guid: 10f4b5ef48f103c4e93840bae4c0c1fd, type: 3}
       propertyPath: m_Name
       value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285591954927328280, guid: 10f4b5ef48f103c4e93840bae4c0c1fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2814,7 +2830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1409602827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2874,13 +2890,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 8
+  mTrackableName: Double
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/FinalProject.xml
-  mAspectRatio: 1.3333273
+  mAspectRatio: 0.63179976
   mImageTargetType: 0
-  mWidth: 0.055
-  mHeight: 0.073333
+  mWidth: 0.0889
+  mHeight: 0.056167
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -2896,7 +2912,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 10080510}
@@ -2916,7 +2932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1409602828}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 8
+  mTargetName: Double
   mDatasetName: Vuforia/FinalProject.xml
   mCastedBehaviour: {fileID: 1409602828}
   mMeshFilter: {fileID: 0}
@@ -3351,7 +3367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1764098476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3411,13 +3427,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 10
+  mTrackableName: Oxygen
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/FinalProject.xml
-  mAspectRatio: 1.3333327
+  mAspectRatio: 0.64255345
   mImageTargetType: 0
-  mWidth: 0.55
-  mHeight: 0.733333
+  mWidth: 0.0889
+  mHeight: 0.057123
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -3433,7 +3449,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1960987567}
@@ -3453,7 +3469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1764098477}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 10
+  mTargetName: Oxygen
   mDatasetName: Vuforia/FinalProject.xml
   mCastedBehaviour: {fileID: 1764098477}
   mMeshFilter: {fileID: 0}
@@ -3534,21 +3550,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1764098478}
     m_Modifications:
+    - target: {fileID: 1094414282366847938, guid: 447695cd4f57a454b9008bc288d1a63d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094414282366847938, guid: 447695cd4f57a454b9008bc288d1a63d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094414282366847938, guid: 447695cd4f57a454b9008bc288d1a63d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8331388576169855697, guid: 447695cd4f57a454b9008bc288d1a63d, type: 3}
       propertyPath: m_Name
       value: FlyingRobot
       objectReference: {fileID: 0}
     - target: {fileID: 8448236374899146897, guid: 447695cd4f57a454b9008bc288d1a63d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.005
+      value: 0.0005
       objectReference: {fileID: 0}
     - target: {fileID: 8448236374899146897, guid: 447695cd4f57a454b9008bc288d1a63d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.005
+      value: 0.0005
       objectReference: {fileID: 0}
     - target: {fileID: 8448236374899146897, guid: 447695cd4f57a454b9008bc288d1a63d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.005
+      value: 0.0005
       objectReference: {fileID: 0}
     - target: {fileID: 8448236374899146897, guid: 447695cd4f57a454b9008bc288d1a63d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3556,7 +3584,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8448236374899146897, guid: 447695cd4f57a454b9008bc288d1a63d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 8448236374899146897, guid: 447695cd4f57a454b9008bc288d1a63d, type: 3}
       propertyPath: m_LocalPosition.z
