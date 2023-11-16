@@ -6,6 +6,7 @@ TagManager:
   tags:
   - StartMenu
   - CharacterSelectMenu
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -5,9 +5,14 @@ using Vuforia;
 
 public class Battle : MonoBehaviour
 {
-    //Character c;// get from CharacterSelect script - public selectedCharacter
     static public GameObject character;
-    private bool isFighting = false;
+    private GameObject enemy = null;
+    static private bool isFighting = false;
+    static private GameObject currentEnemy = null;
+    private float imageTargetDimensionX;
+    private float imageTargetDimensionY;
+
+#pragma warning disable CS0618 // Type or member is obsolete
     private VirtualButtonBehaviour buttonBehaviour;
 
     // Start is called before the first frame update
@@ -16,12 +21,25 @@ public class Battle : MonoBehaviour
         buttonBehaviour = GetComponentInChildren<VirtualButtonBehaviour>();
         buttonBehaviour.RegisterOnButtonPressed(OnButtonPressed);
 
+        Vector2 imageDimensions = this.GetComponent<ImageTargetBehaviour>().GetSize();
+        imageTargetDimensionX = imageDimensions.x;
+        imageTargetDimensionY = imageDimensions.y;
+        Debug.Log("--Dimensions: " + imageTargetDimensionX + ", " + imageTargetDimensionY);
+
+        foreach (Transform child in this.transform)
+        {
+            if (child.CompareTag("Enemy"))
+            {
+                enemy = child.gameObject;
+                break;
+            }
+        }
+
         if (character == null)
         {
             character = GameObject.Instantiate(GameObject.Find("CharacterSelectMenu").GetComponent<CharacterSelect>().selectedCharacter); // Duplicate character
+            character.active = false;
             character.layer = LayerMask.NameToLayer("Default"); // Set layer to Default (instead of UI)
-            character.transform.parent = transform;
-            character.transform.localScale = new Vector3(.001f,.001f,.001f);
         }
     }
 
@@ -29,25 +47,51 @@ public class Battle : MonoBehaviour
     {
         Debug.Log("--OnButtonPressed: " + vb.VirtualButtonName);
 
-        Debug.Log(character.name);
+        Debug.Log("--Character: " + character.name);
 
         isFighting = !isFighting;
 
-        Vector2 imageDimensions = this.GetComponent<ImageTargetBehaviour>().GetSize();
-        float x = imageDimensions.x;
-        float y = imageDimensions.y;
-        this.transform.position = new Vector3(x/2, this.transform.position.y, y/2);
-        character.transform.position = new Vector3(x + x/2, character.transform.position.y, y + y/2);
+        // TODO:Button pressed multiple times moves enemy out of card area
+
+        if (isFighting)
+        {
+            if (currentEnemy == null)
+            {
+                // Enemy fighting setup
+                currentEnemy = this.gameObject;
+                enemy.transform.position = new Vector3(enemy.transform.position.x - imageTargetDimensionX / 2, enemy.transform.position.y, enemy.transform.position.z);
+                enemy.transform.Rotate(0, -90, 0);
+
+                // Character fighting setup
+                character.transform.parent = this.transform;
+                character.transform.position = this.transform.position;
+                character.transform.localScale = new Vector3(.025f, .025f, .025f);
+                character.transform.position += new Vector3(imageTargetDimensionX / 2, 0, 0);
+                character.transform.LookAt(enemy.transform);
+                character.active = true;
+            }
+        }
+        else
+        {
+            if (currentEnemy == this.gameObject)
+            {
+                // Restore
+                currentEnemy = null;
+                enemy.transform.position = new Vector3(enemy.transform.position.x + imageTargetDimensionX / 2, enemy.transform.position.y, enemy.transform.position.z);
+                enemy.transform.Rotate(0, 90, 0);
+                character.active = false;
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         //if (isFighting) {
-            //Time t = now
-            // if (t == t+.5 seconds) {
-            //  enemyAttack
-            //}
+        //Time t = now
+        // if (t == t+.5 seconds) {
+        //  enemyAttack
+        //}
         //}
     }
 }
