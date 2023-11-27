@@ -41,12 +41,12 @@ public class CharacterStats : MonoBehaviour
             if (this.CompareTag("Player"))
             {
                 //lose.active = true;
-                win.active = true;
+                win.SetActive(true);
             }
             else if (this.CompareTag("Enemy"))
             {
                 //win.active = true;
-                lose.active = true;
+                lose.SetActive(true);
             }
         }
     }
@@ -69,6 +69,16 @@ public class CharacterStats : MonoBehaviour
     public float getMaxHealth()
     {
         return maxHealth;
+    }
+
+    public float getAttack()
+    {
+        return attack;
+    }
+
+    public float getDefense()
+    {
+        return defense;
     }
 
     public void attackCharacter(CharacterStats targetCharacter)
