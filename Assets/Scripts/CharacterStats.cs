@@ -81,11 +81,18 @@ public class CharacterStats : MonoBehaviour
         return defense;
     }
 
-    public void attackCharacter(CharacterStats targetCharacter)
+    public void attackCharacter(CharacterStats targetCharacter, bool isSpecial)
     {
         if (targetCharacter != null) 
         {
-            targetCharacter.removeHealth(attack * (1/targetCharacter.defense));
+            float damage = attack * (1 / targetCharacter.defense);
+
+            if (isSpecial)
+            {
+                damage *= 3;
+            }
+
+            targetCharacter.removeHealth(damage);
         }
     }
 }

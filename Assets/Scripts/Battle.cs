@@ -17,16 +17,33 @@ public class Battle : MonoBehaviour
     private float imageTargetDimensionX;
     private float imageTargetDimensionY;
     private float lastAttackTime = 0f;
+    static private float lastHealTime = 0f;
+    static private float lastSpecialAttackTime = 0f;
     private bool isPlayersTurnToAttack = true;
 
-#pragma warning disable CS0618 // Type or member is obsolete
-    private VirtualButtonBehaviour buttonBehaviour;
+#pragma warning disable CS0618 // Type or member is obsolete - VirtualButtonBehaviour
 
     // Start is called before the first frame update
     private void Awake()
     {
-        buttonBehaviour = GetComponentInChildren<VirtualButtonBehaviour>();
-        buttonBehaviour.RegisterOnButtonPressed(OnButtonPressed);
+        VirtualButtonBehaviour[] buttonBehaviours = GetComponentsInChildren<VirtualButtonBehaviour>();
+        foreach (VirtualButtonBehaviour button in buttonBehaviours)
+        {
+            if (button.name == "FightButton") 
+            {
+                button.RegisterOnButtonPressed(OnFightButtonPressed);
+            }
+
+            if (button.name == "HealButton")
+            {
+                button.RegisterOnButtonPressed(OnHealButtonPressed);
+            }
+
+            if (button.name == "SpecialAttackButton")
+            {
+                button.RegisterOnButtonPressed(OnSpecialAttackButtonPressed);
+            }
+        }
 
         playerHealthBar = GameObject.Find("Player Health Bar").GetComponentInChildren<Slider>();
         enemyHealthBar = GameObject.Find("Enemy Health Bar").GetComponentInChildren<Slider>();
@@ -55,7 +72,7 @@ public class Battle : MonoBehaviour
         }
     }
 
-    public void OnButtonPressed(VirtualButtonBehaviour vb)
+    public void OnFightButtonPressed(VirtualButtonBehaviour vb)
     {
         Debug.Log("--OnButtonPressed: " + vb.VirtualButtonName);
 
@@ -96,6 +113,26 @@ public class Battle : MonoBehaviour
         }
     }
 
+    public void OnHealButtonPressed(VirtualButtonBehaviour vb)
+    {
+        float time = Time.time;
+        if (time > lastHealTime + 10f)
+        {
+            player.addHealth(10f);
+        }
+    }
+
+    public void OnSpecialAttackButtonPressed(VirtualButtonBehaviour vb)
+    {
+        float time = Time.time;
+        
+        if (time > lastSpecialAttackTime + 20f)
+        {
+            bool isSpecial = true;
+            player.attackCharacter(enemy, isSpecial);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -104,20 +141,22 @@ public class Battle : MonoBehaviour
             
             if (time > lastAttackTime + .5f)
             {
+                bool isSpecial = false;
                 Debug.Log("Time: " + time.ToString());
                 Debug.Log("Last: " + lastAttackTime.ToString());
                 lastAttackTime = time;
 
                 if (isPlayersTurnToAttack)
                 {
-                    player.attackCharacter(enemy);
+                    
+                    player.attackCharacter(enemy, isSpecial);
                     Debug.Log("Enemy Health: " + enemy.getHealth().ToString());
                     enemyHealthBar.maxValue = enemy.getMaxHealth();
                     enemyHealthBar.value = enemy.getHealth();
                 }
                 else
                 {
-                    enemy.attackCharacter(player);
+                    enemy.attackCharacter(player, isSpecial);
                     Debug.Log("Player Health: " + player.getHealth().ToString());
                     playerHealthBar.maxValue = player.getMaxHealth();
                     playerHealthBar.value = player.getHealth();
