@@ -19,10 +19,8 @@ public class CharacterStats : MonoBehaviour
         if (win == null)
         {
             win = GameObject.Find("WinMenu");
-            Debug.Log("Win " + win == null ? "Found" : "Not Found");
-            win.SetActive(false);
             lose = GameObject.Find("LoseMenu");
-            Debug.Log("Lose " + lose == null ? "Found" : "Not Found");
+            win.SetActive(false);
             lose.SetActive(false);
         }
     }
@@ -41,12 +39,14 @@ public class CharacterStats : MonoBehaviour
             if (this.CompareTag("Player"))
             {
                 //lose.active = true;
-                win.SetActive(true);
+                lose.SetActive(true);
+                Time.timeScale = 0; // Pause
             }
             else if (this.CompareTag("Enemy"))
             {
                 //win.active = true;
-                lose.SetActive(true);
+                win.SetActive(true);
+                Time.timeScale = 0; // Pause
             }
         }
     }
@@ -85,13 +85,14 @@ public class CharacterStats : MonoBehaviour
     {
         if (targetCharacter != null) 
         {
-            float damage = attack * (1 / targetCharacter.defense);
+            float damage = attack * (10 / (targetCharacter.defense + 10));
 
             if (isSpecial)
             {
                 damage *= 3;
             }
 
+            Debug.Log("Damage: " + damage.ToString());  
             targetCharacter.removeHealth(damage);
         }
     }

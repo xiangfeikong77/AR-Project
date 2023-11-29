@@ -11,6 +11,7 @@ public class CharacterSelect : MonoBehaviour
     private int selectedCharacterPosition;
     private CharacterStats characterStats;
     private TextMeshProUGUI characterStatsText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,12 +30,7 @@ public class CharacterSelect : MonoBehaviour
         updateCharacterStatsText();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (selectedCharacter != null) { }
-    }
-
+    /* Next character rotation on-screen button */
     public void onButtonPressed()
     {
         selectedCharacter.SetActive(false);
@@ -54,6 +50,7 @@ public class CharacterSelect : MonoBehaviour
         updateCharacterStatsText();
     }
 
+    /* Display character stats in the text object */
     private void updateCharacterStatsText()
     {
         float maxHealth;

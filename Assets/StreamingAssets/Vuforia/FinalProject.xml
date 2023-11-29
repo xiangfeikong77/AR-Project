@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="Laser" size="0.088900 0.056756" />
     <ImageTarget name="Meteoroid" size="0.088900 0.056760" />
     <ImageTarget name="Double" size="0.088900 0.056167" />
     <ImageTarget name="Oxygen" size="0.088900 0.057123" />
