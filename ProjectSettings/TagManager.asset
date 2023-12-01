@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - StartMenu
+  - CharacterSelectMenu
+  - Enemy
+  - WinMenu
+  - LoseMenu
   layers:
   - Default
   - TransparentFX

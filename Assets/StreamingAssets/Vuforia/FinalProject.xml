@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
-    <ImageTarget name="13" size="0.055000 0.073333" />
-    <ImageTarget name="12" size="0.055000 0.073333" />
-    <ImageTarget name="11" size="0.055000 0.073333" />
-    <ImageTarget name="10" size="0.550000 0.733333" />
-    <ImageTarget name="9" size="0.550000 0.733333" />
-    <ImageTarget name="8" size="0.055000 0.073333" />
-    <ImageTarget name="7" size="0.085000 0.063750" />
-    <ImageTarget name="6" size="0.085000 0.063750" />
-    <ImageTarget name="5" size="0.085000 0.063750" />
-    <ImageTarget name="4" size="0.085000 0.063750" />
-    <ImageTarget name="3" size="0.085000 0.063750" />
-    <ImageTarget name="2" size="0.085000 0.063750" />
-    <ImageTarget name="1" size="0.085000 0.063750" />
+    <ImageTarget name="Laser" size="0.088900 0.056756" />
+    <ImageTarget name="Meteoroid" size="0.088900 0.056760" />
+    <ImageTarget name="Double" size="0.088900 0.056167" />
+    <ImageTarget name="Oxygen" size="0.088900 0.057123" />
+    <ImageTarget name="Junk" size="0.088900 0.056539" />
+    <ImageTarget name="Wormhole" size="0.088900 0.056433" />
   </Tracking>
 </QCARConfig>
